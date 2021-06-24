@@ -1,5 +1,5 @@
 package Models
 
-class CategoriaServicio(val categoria: List<String> = listOf("Manicure", "Pedicure", "Estetica")){
+class CategoriaServicio(val categoria: List<String> = listOf("Cabello", "Tratamientos Faciales", "Depilación", "Uñas", "Eyebrows/Lashes", "Tratamientos Corporales")){
     //val categoria:String,
 }

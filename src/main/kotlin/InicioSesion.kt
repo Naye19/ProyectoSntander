@@ -5,10 +5,17 @@ fun main(){
 var user: String = ""
 var pass: String = ""
 var correo: String = ""
+var negocio: String= ""
+var precio: Double = 0.0
 
 val usuario: MutableList<String> = mutableListOf()
 val contrasena: MutableList<String> = mutableListOf()
 val email: MutableList<String> = mutableListOf()
+
+val ne: MutableList<String> = mutableListOf()
+val per: MutableList<String> = mutableListOf()
+val cor: MutableList<String> = mutableListOf()
+val pre: MutableList<String> = mutableListOf()
 
 fun saludar(){
     println("------------------------------------------------------------")
@@ -27,6 +34,7 @@ fun sesion(){
             validarusuario()
             println("##### Hola $user has iniciado sesión #####")
             ubicacion()
+            menu()
         }
         2->{
             registarUsuario()
@@ -87,6 +95,8 @@ fun validarusuario(){
 
 fun ubicacion(){
     println("¿Desea encender su ubicación?")
+    println("1- Si")
+    println("2- No")
     val op = readLine()!!.toInt()
     when(op){
         1-> {println("Su ubicacion se activo correctamente")
@@ -109,14 +119,81 @@ fun menu(){
     when(x){
         1-> {
             println("Registrar negocio")
+            registranegocio()
         }
         2->{
             println("Configuración")
         }
         3->{
             println("Buscar Servicio")
+            Busquecaser()
         }
-        else-> menu()
+        else-> {
+            println("intente de nuevo")
+            menu()}
     }
 }
+
+fun registranegocio(){
+    println("Registrar un negocio")
+    println("Nombre del Negocio: ")
+    negocio = readLine()?.toString() as String
+    ne.add("$negocio")
+    println("Nombre completo")
+    val persona = readLine()?.toString() as String
+    per.add("$persona")
+    println("Correo: ")
+    println(email.last())
+    cor.add("$email")
+    println("Precio")
+    precio = readLine()?.toDouble() as Double
+    pre.add("$precio")
+    println("¿Guardar datos?")
+    println("1- Si")
+    println("2- No")
+    val x= readLine()!!.toInt()
+    when(x){
+        1->{println("Datos guardados") }
+        2->{println("Proceso cancelado")
+            menu()
+        }
+    }
+
+}
+
+fun Busquecaser(){
+    val n = readLine()!!.toString()
+    println("$n buscando")
+    if(ne == ne.filter{it == "$n" }){
+        println("$n Existe")
+        println("Costo: $pre")
+        //contratar()
+    }else{
+        println("$n no existe, intente de nuevo")
+        Busquecaser()
+    }
+}
+
+/*fun contratar(){
+    println("Contratar servicio")
+    println("1. Si")
+    println("2. No")
+    val x= readLine()!!.toInt()
+    when(x){
+        1->{
+            pagar()
+        }
+        2->Busquecaser()
+        else->contratar()
+    }
+}
+
+fun pagar(saldo:Double = 100.0){
+    if(saldo >= pre.filter{it == "$precio"}.toString()){
+        val total = saldo.minus("$precio")
+        println("Artículo comprado, saldo restante: $total pesos")
+    }else {
+        println("Necesitas saldo suficiente para poder comprar este producto")
+    }
+}*/
 

@@ -1,6 +1,6 @@
 package Models
 
-val catego: Set<String> = setOf("Manicure", "Pedicure", "Estetica")
+val catego: Set<String> = setOf("Cabello", "Tratamientos Faciales", "Depilación", "Uñas", "Eyebrows/Lashes", "Tratamientos Corporales")
 class Servicios (var categoria: String , val nombreServicio: String,val precio: Float){
 
 }

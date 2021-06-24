@@ -26,34 +26,45 @@ fun sesion(){
     val x= readLine()!!.toInt()
     when(x){
         1->{
-            println("Iniciar Sesión")
-            println("Ingresa tu nombre de usuario:")
-            user=readLine()?.toString() as String
-            println("Ingresa tu contraseña:")
-            pass=readLine()?.toString() as String
+            iniciarSesion()
             validarusuario()
             println("##### Hola $user has iniciado sesión #####")
         }
-        else->{
-            println("Ingresa tu nombre de usuario:")
-            user=readLine()?.toString() as String
-            usuario.add("$user")
-
-            println("Ingresa tu correo electrónico:")
-            correo=readLine()?.toString() as String
-            email.add("$correo")
-
-            println("Ingresa tu contraseña:")
-            pass=readLine()?.toString() as String
-            contrasena.add("$pass")
-            usuario
-            email
-            contrasena
+        2->{
+            registarUsuario()
             verifyAge()
             sesion()
         }
+        else->sesion()
 
     }
+}
+
+fun iniciarSesion(){
+    println("Iniciar Sesión")
+    println("Favor de ingresar tus datos para iniciar sesión.")
+    println("Usuario:")
+    user=readLine()?.toString() as String
+    println("Contraseña:")
+    pass=readLine()?.toString() as String
+}
+
+fun registarUsuario(){
+    println("Registrarse")
+    println("Usuario:")
+    user=readLine()?.toString() as String
+    usuario.add("$user")
+
+    println("Correo electrónico:")
+    correo=readLine()?.toString() as String
+    email.add("$correo")
+
+    println("Contraseña:")
+    pass=readLine()?.toString() as String
+    contrasena.add("$pass")
+    usuario
+    email
+    contrasena
 }
 
 fun verifyAge(){
@@ -68,7 +79,8 @@ fun verifyAge(){
 
 fun validarusuario(){
     if(usuario == usuario.filter{it == "$user"}){
-    }else if(contrasena == contrasena.filter{it == "$pass"}){
+    }
+    if(contrasena == contrasena.filter{it == "$pass"}){
     }else{
         println("Datos incorrectos")
         sesion()

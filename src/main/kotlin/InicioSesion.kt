@@ -1,9 +1,6 @@
 fun main(){
     saludar()
     sesion()
-    //opcionesIniciales()
-    //menuServicios()
-
 }
 var user: String = ""
 var pass: String = ""
@@ -29,6 +26,7 @@ fun sesion(){
             iniciarSesion()
             validarusuario()
             println("##### Hola $user has iniciado sesión #####")
+            ubicacion()
         }
         2->{
             registarUsuario()
@@ -86,3 +84,39 @@ fun validarusuario(){
         sesion()
     }
 }
+
+fun ubicacion(){
+    println("¿Desea encender su ubicación?")
+    val op = readLine()!!.toInt()
+    when(op){
+        1-> {println("Su ubicacion se activo correctamente")
+            menu()
+        }
+        2-> {println("No fue posible encender su ubicación ")
+            ubicacion()
+        }
+        else-> println("Seleccione una opcion valida")
+    }
+
+}
+
+fun menu(){
+    println("Menu")
+    println("1. Registrar negocio")
+    println("2. Configuracion")
+    println("3. Buscar servicio")
+    val x= readLine()!!.toInt()
+    when(x){
+        1-> {
+            println("Registrar negocio")
+        }
+        2->{
+            println("Configuración")
+        }
+        3->{
+            println("Buscar Servicio")
+        }
+        else-> menu()
+    }
+}
+

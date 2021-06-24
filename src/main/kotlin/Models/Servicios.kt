@@ -1,8 +1,8 @@
 package Models
 
 val catego: Set<String> = setOf("Manicure", "Pedicure", "Estetica")
-class Servicios (){
-    
+class Servicios (var categoria: String , val nombreServicio: String,val precio: Float){
+
 }
 
 

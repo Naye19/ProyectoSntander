@@ -47,7 +47,7 @@ fun sesion(){
             verifyAge()
             sesion()
         }
-        else->
+        else->{
         println("Favor de ingresar una opción válida")
         sesion()
 

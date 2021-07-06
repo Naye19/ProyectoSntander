@@ -1,3 +1,5 @@
+import java.awt.SystemColor.menu
+
 fun main(){
     saludar()
     sesion()
@@ -24,36 +26,36 @@ fun saludar(){
     println("------------------------------------------------------------")
 }
 
-fun sesion(){
+fun sesion() {
     val opcionesSesion = listOf(
         "1 - Iniciar Sesión",
         "2 - Registrarse"
     )
-    for(opcion in opcionesSesion){
+    for (opcion in opcionesSesion) {
         println(opcion)
     }
     print("Selecciona una opción (Ingresa únicamente el número): ")
-    val x= readLine()!!.toInt()
-    when(x){
-        1->{
+    val x = readLine()!!.toInt()
+    when (x) {
+        1 -> {
             iniciarSesion()
             validarusuario()
             println("##### Hola $user has iniciado sesión #####")
             ubicacion()
             menu()
         }
-        2->{
+        2 -> {
             registarUsuario()
             verifyAge()
             sesion()
         }
-        else->{
-        println("Favor de ingresar una opción válida")
-        sesion()
+        else -> {
+            println("Favor de ingresar una opción válida")
+            sesion()
 
+        }
     }
 }
-
 fun iniciarSesion(){
     println("Iniciar Sesión")
     println("Favor de ingresar tus datos para iniciar sesión.")

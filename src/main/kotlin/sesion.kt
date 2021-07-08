@@ -24,7 +24,8 @@ fun sesion() {
             sesion()
         }
         else -> {
-            println("Favor de ingresar una opción válida")
+            println("")
+            println("####### Favor de ingresar una opción válida ########")
             sesion()
 
         }

@@ -22,14 +22,7 @@ val pre: MutableList<String> = mutableListOf()
 
 
 
-fun iniciarSesion(){
-    println("Iniciar Sesión")
-    println("Favor de ingresar tus datos para iniciar sesión.")
-    println("Usuario:")
-    user=readLine()?.toString() as String
-    println("Contraseña:")
-    pass=readLine()?.toString() as String
-}
+
 
 fun registarUsuario(){
     println("Registrarse")
@@ -69,22 +62,6 @@ fun validarusuario(){
     }
 }
 
-fun ubicacion(){
-    println("¿Desea encender su ubicación?")
-    println("1- Si")
-    println("2- No")
-    val op = readLine()!!.toInt()
-    when(op){
-        1-> {println("Su ubicación se activó correctamente")
-            menu()
-        }
-        2-> {println("No fue posible encender su ubicación ")
-            ubicacion()
-        }
-        else-> println("Seleccione una opción válida")
-    }
-
-}
 
 fun menu(){
     val opcionesMenu = listOf(

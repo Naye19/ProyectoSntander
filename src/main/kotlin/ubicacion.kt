@@ -13,7 +13,11 @@ fun ubicacion(){
         2-> {println("#### No fue posible encender tu ubicación ####")
             ubicacion()
         }
-        else-> println("Selecciona una opción válida")
+        else-> {
+            println("")
+            println("#### Selecciona una opción válida ####")
+            ubicacion()
+        }
     }
 
 }

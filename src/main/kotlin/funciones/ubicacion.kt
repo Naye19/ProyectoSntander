@@ -1,3 +1,7 @@
+package funciones
+
+import menu
+
 fun ubicacion(){
     println("")
     println("##### Esta aplicación hace uso de la ubicación del dispositivo para el correcto funcionamiento ####")

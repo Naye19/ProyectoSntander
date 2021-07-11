@@ -1,3 +1,5 @@
+package funciones
+
 fun saludar(){
     println("###########################################################")
     println("#                                                         #")

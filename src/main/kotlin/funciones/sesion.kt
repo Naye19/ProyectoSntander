@@ -1,3 +1,10 @@
+package funciones
+
+import menu
+import registarUsuario
+import user
+import validarusuario
+
 fun sesion() {
     val opcionesSesion = listOf(
         "     | 1 - Iniciar Sesión |",

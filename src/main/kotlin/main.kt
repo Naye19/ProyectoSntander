@@ -1,6 +1,6 @@
+import funciones.menu
 import funciones.saludar
 import funciones.sesion
-import java.awt.SystemColor.menu
 
 fun main(){
     saludar()
@@ -20,6 +20,9 @@ val ne: MutableList<String> = mutableListOf()
 val per: MutableList<String> = mutableListOf()
 val cor: MutableList<String> = mutableListOf()
 val pre: MutableList<String> = mutableListOf()
+
+
+
 
 fun registarUsuario(){
     println("Registrarse")

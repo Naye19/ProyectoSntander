@@ -1,6 +1,5 @@
 package funciones
 
-import menu
 import registarUsuario
 import user
 import validarusuario

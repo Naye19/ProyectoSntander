@@ -1,6 +1,6 @@
 package funciones
 
-import menu
+
 
 fun ubicacion(){
     println("")

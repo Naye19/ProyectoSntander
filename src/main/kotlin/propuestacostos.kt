@@ -42,6 +42,8 @@ fun main() {
     println("Por temporada de promoción cualquiera de los servicios tiene un costo de $150 pesos")
     println("El total de tu compra antes de descuento es de $ $total")
     println("Por temporada de promoción tenemos algunos descuentos adicionales, descubre si te toca alguno")
+
+
     when(qty){
         in 0..2 -> println("Para dos servicios o menos no aplica ningún desceunto")
         in 3..5 -> {

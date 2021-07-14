@@ -70,7 +70,7 @@ fun registranegocio(){
     val persona = readLine()?.toString() as String
     per.add("$persona")
     println("Correo: ")
-    println(email.last())
+    correo = readLine()?.toString() as String
     cor.add("$email")
     println("Precio")
     precio = readLine()?.toDouble() as Double

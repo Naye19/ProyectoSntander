@@ -18,7 +18,7 @@ fun sesion() {
     val x = readLine()!!.toInt()
     when (x) {
         1 -> {
-            iniciarSesion()
+            inicioSesion()
             validarusuario()
             println("##### Hola $user has iniciado sesión #####")
             ubicacion()

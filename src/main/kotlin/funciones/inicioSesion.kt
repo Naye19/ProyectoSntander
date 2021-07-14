@@ -3,7 +3,7 @@ package funciones
 import pass
 import user
 
-fun iniciarSesion(){
+fun inicioSesion(){
     println("")
     println("--------------------")
     println("|  Iniciar Sesión  |")

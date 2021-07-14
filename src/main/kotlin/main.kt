@@ -1,3 +1,4 @@
+
 import funciones.menu
 import funciones.saludar
 import funciones.sesion
@@ -100,27 +101,4 @@ fun Busquecaser(){
         Busquecaser()
     }
 }
-
-/*fun contratar(){
-    println("Contratar servicio")
-    println("1. Si")
-    println("2. No")
-    val x= readLine()!!.toInt()
-    when(x){
-        1->{
-            pagar()
-        }
-        2->Busquecaser()
-        else->contratar()
-    }
-}
-
-fun pagar(saldo:Double = 100.0){
-    if(saldo >= pre.filter{it == "$precio"}.toString()){
-        val total = saldo.minus("$precio")
-        println("Artículo comprado, saldo restante: $total pesos")
-    }else {
-        println("Necesitas saldo suficiente para poder comprar este producto")
-    }
-}*/
 

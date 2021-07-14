@@ -1,6 +1,7 @@
 package funciones
 
 import Busquecaser
+import crearServicio
 import registranegocio
 
 fun menu(){
@@ -23,12 +24,12 @@ fun menu(){
         1-> {
             println("")
             println("#### Buscar Servicio ####")
-            Busquecaser()
+            buscaServicio()
         }
         2->{
             println("")
             println("#### Brindar Servicio ####")
-            registranegocio()
+            crearServicio()
         }
         3->{
             println("")

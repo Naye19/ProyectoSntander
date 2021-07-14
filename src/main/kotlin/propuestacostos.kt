@@ -39,10 +39,18 @@ fun main() {
     print("Selecciona la cantidad: ")
     val qty = readLine()!!.toInt()
     val total = qty*150
+    Thread.sleep(1000)
+    println("#################################################################################")
     println("Por temporada de promoción cualquiera de los servicios tiene un costo de $150 pesos")
+    println("#################################################################################")
+    println("")
+    Thread.sleep(1000)
     println("El total de tu compra antes de descuento es de $ $total")
+    println("")
+    println("#################################################################################")
     println("Por temporada de promoción tenemos algunos descuentos adicionales, descubre si te toca alguno")
-
+    println("#################################################################################")
+    Thread.sleep(1000)
 
     when(qty){
         in 0..2 -> println("Para dos servicios o menos no aplica ningún desceunto")
@@ -69,5 +77,9 @@ fun main() {
             println("El total de tu compra antes de descuento es de $ $total")
         }
     }
+    println("¿Continuar al pago?")
+    println("1 - Sí")
+    println("2 - No, seguir comprando")
+
 }
 

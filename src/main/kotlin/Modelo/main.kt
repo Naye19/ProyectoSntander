@@ -7,6 +7,7 @@ fun main() {
     val date = Date()
     val hourFormat: DateFormat = SimpleDateFormat("HH:mm:ss")
     val dateFormat: DateFormat = SimpleDateFormat("dd/MM/yyyy")
+    println("Prueba")
 
     val nueva = Categoria(1, "Cabello")
     val nueva2 = Categoria(2, "Tratamientos faciales")
